@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Quicksand;
+  font-size: 21px;
+  text-decoration: none;
+}
+
+canvas {
+  display: block;
+}
