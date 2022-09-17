@@ -2,6 +2,8 @@
 let stack = [];
 let g = 0.98;
 let FRICTION = 1;
+let buffer;
+
 class Pendulum {
   constructor(r, angle, mass) {
     this.index = stack.length;
@@ -79,7 +81,6 @@ class Pendulum {
   }
 }
 
-let buffer;
 function setup() {
   createCanvas(screen.width, window.innerHeight);
 
@@ -88,14 +89,14 @@ function setup() {
 
   buffer = createGraphics(screen.width, window.innerHeight);
   buffer.background(175);
-  buffer.translate(width/2, height/2);
+  buffer.translate(width/2, height/3);
 }
 
 function draw() {
   background(220);
   imageMode(CORNER);
   image(buffer, 0, 0, width, height);
-  translate(width/2, height/2);
+  translate(width/2, height/3);
 
   stroke(0);
   strokeWeight(2);
